@@ -1,0 +1,17 @@
+#create-class-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 66vw;
+    margin: 0 auto;
+    padding: 5rem 0rem;
+}
+body {
+    margin: 1rem auto;
+}
+header {
+    padding: 1rem 1.5rem;
+}
+img {
+    max-width: 168px;
+    max-height: 84px;
+}

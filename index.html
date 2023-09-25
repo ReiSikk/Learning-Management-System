@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>LMS - Le mood</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="/assets/cphbusiness.jpg" alt="logo">
+        </nav>
+    </header>
+    <main>
+        <form id="create-class-form">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Name">
+            <label for="study line">Study line</label>
+            <input type="text" name="study-line" id="study-line" placeholder="Study line">
+            <label for="class-year">Class year</label>
+            <input type="number" name="class-year" id="class-year" placeholder="Class year">
+            <label for="international">International</label>
+            <input type="checkbox" name="international" id="international">
+            <input type="submit" value="Create new class">
+        </form>
+        <div class="container">
+
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+    <script type="module" src="firebase-api.js"></script>
+    <script type="module" src="update.js"></script>
+</body>
+</html>
