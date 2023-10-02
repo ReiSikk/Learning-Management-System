@@ -1,4 +1,4 @@
-const BASE_URL = "";
+const BASE_URL = "https://web-1st-semester-default-rtdb.europe-west1.firebasedatabase.app/LMS/";
 
 export async function postClass (newClass) {
     const response = await fetch(BASE_URL + "classes.json", {
@@ -13,8 +13,7 @@ export async function postClass (newClass) {
 export async function getAllClasses() {
     const response = await fetch(BASE_URL + "classes.json");
     const body = await response.json();
-    toArray(body);
-    return body;
+    return toArray(body);
 }
 
 export async function getOneClass(id) {
@@ -34,10 +33,12 @@ export async function deleteClass(id) {
 
 function toArray(firebaseBody) {
     const keys = Object.keys(firebaseBody);
+
     const transformed = keys.map((key) => {
         const obj = firebaseBody[key]
         obj.id = key;  
         return obj;
     })
     console.log(transformed, "transformed");
+    return transformed
 }

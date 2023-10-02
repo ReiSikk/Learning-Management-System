@@ -1,6 +1,4 @@
-import { getAllClasses } from "./firebase-api"
-import { deleteClass } from "./firebase-api";
-
+import { getAllClasses, deleteClass } from "./firebase-api";
 
 
 window.addEventListener("load", async () => {
@@ -22,7 +20,6 @@ function createClassElement(oneClass) {
 
 
     button.addEventListener("click", async () => {
-        
         const response = await deleteClass(oneClass.id);
         if(response.ok) {
             div.remove();
@@ -31,13 +28,10 @@ function createClassElement(oneClass) {
 
     const updateButton = document.createElement("a");
     updateButton.textContent = "update";
-    updateButton.href ="update";
-    updateButton.addEventListener("click", () => {
-
-    })
+    updateButton.href ="update/?id=" + oneClass.id
 
     const div = document.createElement("div");
-    div.append(p, button, update);
+    div.append(p, button, updateButton);
 
     return div;
 }
