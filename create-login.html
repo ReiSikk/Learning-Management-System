@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="create-login/create-login.js" defer></script>
     <title>Log in</title>
 </head>
 <body id="login-page">
     <main>
         <div class="login-wrapper">
-            <form id="login-form">
+            <form id="create-login-form">
                 <div class="input-1">
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" placeholder="john.doe@gmail.com">
@@ -18,10 +19,14 @@
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" placeholder="Password">
                 </div>
+                <div class="input-3">
+                    <label for="password">Confirm password</label>
+                    <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm password">
+                </div>
                 <input type="submit" value="Log in">
             </form>
         </div>
     </main>
-    <script src="login.js"></script>
+    <script src="create-login/create-login.js"></script>
 </body>
 </html>
