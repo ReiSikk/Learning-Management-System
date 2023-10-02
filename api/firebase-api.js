@@ -4,10 +4,9 @@ export async function postClass (newClass) {
     const response = await fetch(BASE_URL + "classes.json", {
         method: "POST",
         body: JSON.stringify(newClass),
-        headers: {
-            "Content-Type": "application/json",
-        },
     });
+    console.log(body, "body in the api js file");
+    const body = await response.json();
 };
 
 export async function getAllClasses() {

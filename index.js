@@ -1,4 +1,4 @@
-import { getAllClasses, deleteClass } from "./firebase-api";
+import { getAllClasses, deleteClass } from "./api/firebase-api.js";
 
 
 window.addEventListener("load", async () => {
